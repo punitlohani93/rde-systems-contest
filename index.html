@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUgBCMu_v4xD0yZciH6mqiOQ0PhJzlI1s" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUgBCMu_v4xD0yZciH6mqiOQ0PhJzlI1s" async defer></script>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -19,7 +20,7 @@
 <body ng-app="locateMeApp">
     <div id="main" class="container" ng-controller="mainController">
         <div class="col-md-offset-2 col-md-8" ng-model="ipAddress">
-            <div id="mapContainer" ng-model="locationObject">
+            <div id="ipAndLocationContainer" ng-model="locationObject">
                 <p>
                     <h2>
                         Ip address of visitor is : {{ipAddress}}
@@ -28,6 +29,9 @@
                         Location of visitor is {{locationObject.center.lat}} and {{locationObject.center.lng}}
                     </h1>
                 </p>    
+            </div>
+            <div id="mapContainer">
+                
             </div>
         </div>
         
